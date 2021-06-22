@@ -36,10 +36,11 @@ class Deck(Sequence):
     
     @cached_property
     def cards(self):
-        ranks_per_suit = self.ranked_cards / len(self.suits)
+        suits_is_factor = ((self.ranked_cards % len(self.suits)) == 0)
+        if not suits_is_factor:
+            raise ValueError('length of suits must be a factor of ranked_cards')
+        ranks_per_suit = self.ranked_cards // len(self.suits)
         value_range = range(1, ranks_per_suit + 1)
-        if not ranks_per_suit.is_integer():
-            raise ValueError('ranked_cards must be evenly divisible by number of suits')
         wildcards = [
             wildcard()
             for _ in range(self.wildcards)]
