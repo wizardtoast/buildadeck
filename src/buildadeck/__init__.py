@@ -1,1 +1,1 @@
-from buildadeck.buildadeck import Card, Deck, Shoe
+from buildadeck.buildadeck import Card, wildcard, Deck, Shoe
