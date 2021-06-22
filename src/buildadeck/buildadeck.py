@@ -58,17 +58,6 @@ class Deck(Sequence):
     def __repr__(self):
         return simple_repr(self, suits=self.suits, ranked_cards=self.ranked_cards, wildcards=self.wildcards)
 
-# class WeightedDeck(Deck):
-#     '''similar to a Deck object, weights are applied to the number of cards created per suit
-#     useful when a deck should have an uneven distribution of cards'''
-#     def __init__(self, weights, *args, **kwargs):
-#         super().__init__(*args, **kwargs)
-#         if not weights:
-#             distributed_weight = 1 / len(suits)
-#             default_weights = [distributed_weight for _ in range(len(suits))]
-#         self.weights = weights or default_weights
-#         ...
-
 class Shoe(Sequence):
     def __init__(self, deck, deck_count):
         self._deck = deck
