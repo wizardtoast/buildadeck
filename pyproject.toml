@@ -1,0 +1,40 @@
+# https://www.python.org/dev/peps/pep-0621/
+# https://www.python.org/dev/peps/pep-0517/
+# https://www.python.org/dev/peps/pep-0440/#version-specifiers
+
+[project]
+name = "buildadeck"
+version = "1.0.0"
+description = "Build-a-Deck, general purpose deck creation and conveniences."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE.txt"}
+authors = [
+    {name = "Wizard Toast"},
+]
+keywords = [
+    "build deck",
+    "build a deck",
+    "buildadeck",
+    "build-a-deck",
+    "card",
+    "cards",
+    "deck",
+    "decks",
+    "deck build",
+    "deck builder",
+    "deck building",
+    "easy deck",
+    "easy deck build",
+    "playing cards",
+]
+
+[project.urls]
+# homepage = ""
+# documentation = ""
+repository = "https://github.com/Wizard-Toast/buildadeck"
+# changelog = ""
+
+[build-system]
+requires = ["wheel", "setuptools"]
+build-backend = "setuptools.build_meta"
