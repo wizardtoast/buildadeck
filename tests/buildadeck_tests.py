@@ -100,3 +100,6 @@ class ShoeTests(unittest.TestCase):
         in relation to the number of decks'''
         self.assertCountEqual(
             self.shoe, self.shoe.shuffled(), "unexpected shuffled card count")
+
+if __name__ == '__main__':
+    unittest.main()
