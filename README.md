@@ -15,7 +15,9 @@
 
 ### Installation
 
-* TODO
+###### Installing locally
+1. Clone / download this repository to a convenient location
+2. From the directory containing `setup.py` run the command `python -m pip install .`
 
 ### Usage
 ##### Creating a card
