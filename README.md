@@ -11,7 +11,7 @@
 ## Getting Started
 ### Dependencies
 
-* The **minimum python version is 3.8** as this package makes use of *functools.cached_property*
+* The **minimum python version is 3.8** as this package makes use of `functools.cached_property`
 
 ### Installation
 
