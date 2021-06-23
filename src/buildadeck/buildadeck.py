@@ -81,7 +81,6 @@ class Shoe(Sequence):
         using mod `%` will allow an index greater than the size of this shoe's deck,
         by up to `len(self)` before raising `IndexError`
         '''
-        # if (key >= len(self)) or (-len(self) > -key):
         if not (-len(self) <= key < len(self)):
             raise IndexError('shoe index out of range')
         return self.deck[key % len(self.deck)]
