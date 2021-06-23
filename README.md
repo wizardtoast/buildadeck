@@ -29,7 +29,7 @@
 >>> ace_of_spades.rank
 1
 >>> repr(ace_of_spades)
-Card(suit='Spades', rank=1)
+"Card(suit='Spades', rank=1)"
 ```
 ##### Creating a standard 52 card French deck
 ```py
