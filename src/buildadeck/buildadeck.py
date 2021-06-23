@@ -18,22 +18,10 @@ class Deck(Sequence):
     wildcards are created in addition to suited cards'''
 
     def __init__(self, suits, ranked_cards, wildcards):
-        self._suits = suits
-        self._ranked_cards = ranked_cards
-        self._wildcards = wildcards
+        self.suits = suits
+        self.ranked_cards = ranked_cards
+        self.wildcards = wildcards
 
-    @property
-    def suits(self):
-        return self._suits
-
-    @property
-    def ranked_cards(self):
-        return self._ranked_cards
-
-    @property
-    def wildcards(self):
-        return self._wildcards
-    
     @cached_property
     def cards(self):
         suits_is_factor = ((self.ranked_cards % len(self.suits)) == 0)
@@ -60,19 +48,10 @@ class Deck(Sequence):
         return simple_repr(self, suits=self.suits, ranked_cards=self.ranked_cards, wildcards=self.wildcards)
 
 class Shoe(Sequence):
+
     def __init__(self, deck, deck_count):
-        self._deck = deck
-        self._deck_count = deck_count
-
-    @property
-    def deck(self):
-        '''the deck assigned to this shoe'''
-        return self._deck
-
-    @property
-    def deck_count(self):
-        '''the number of packs in this shoe'''
-        return self._deck_count
+        self.deck = deck
+        self.deck_count = deck_count
 
     def shuffled(self):
         '''a generator that yields random cards from the shoe'''
