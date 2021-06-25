@@ -2,7 +2,7 @@
 
 from buildadeck.utils import simple_repr
 from collections import namedtuple
-from collections.abc import Sequence
+from collections.abc import Iterable, Sequence
 from functools import cached_property
 from secrets import randbelow
 from types import SimpleNamespace
@@ -50,8 +50,21 @@ class Deck(Sequence):
 class Shoe(Sequence):
 
     def __init__(self, deck, deck_count):
-        self.deck = deck
+        self._deck = deck
         self.deck_count = deck_count
+
+    @property
+    def deck(self):
+        return self._deck
+
+    @deck.setter
+    def deck(self, value):
+        # changes to the given value could cause side effects,
+        # ex: if len(self.deck) changes, shuffling could raise IndexError
+        # so create a copy of the value instead
+        if not isinstance(value, Iterable):
+            raise TypeError('deck must be iterable')
+        self._deck = (*value,)
 
     def shuffled(self):
         '''a generator that yields random cards from the shoe'''
