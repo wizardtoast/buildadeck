@@ -33,7 +33,7 @@ keywords = [
 # homepage = ""
 # documentation = ""
 repository = "https://github.com/Wizard-Toast/buildadeck"
-bug_tracker = "https://github.com/Wizard-Toast/buildadeck/issues"
+tracker = "https://github.com/Wizard-Toast/buildadeck/issues"
 # changelog = ""
 
 [build-system]
