@@ -2,24 +2,33 @@
 
  A humble deck creation station, easily create Decks of Cards and shuffle them in Shoes!
 
+#
 ## Description
 
 *Build-a-Deck* exposes several objects intended to simplify the creation of any standard playing-card style deck. **Cards** are defined by suit and rank. **Decks** evenly assign their given suits to as many incrementally ranked cards as you specify; creating a Deck with four suits and 52 ranked cards will assign cards ranking 1 to 13 for each suit. **Wildcards**, cards with a value of None for *both* suit and rank can be created in addition to ranked cards, however, even distribution of wildcards to suits is not enforced.
 
 **Shoes** act as a sequence of multiple copies of one Deck; given a 52 card Deck and a count of four decks, a Shoe will behave as if it contains 208 cards. Shoes can also produce a secure shuffle using the *secrets* package and an implementation of the Fisher--Yates Shuffle.
 
-## Getting Started
-### Dependencies
-
+#
+## Installation
 * The **minimum python version is 3.8** as this package makes use of `functools.cached_property`
+* *Note: It is recommended to use a virtual environment for any installation method*
 
-### Installation
-
-###### Installing locally
+##### Installing locally:
 1. Clone / download this repository to a convenient location
 2. From the directory containing `setup.py` run the command `python -m pip install .`
 
-### Usage
+##### Installing remotely from main repository branch:
+
+* Install from git clone:
+`python -m pip install --upgrade git+https://github.com/Wizard-Toast/buildadeck.git@main`
+
+* Install from zip:
+`python -m pip install --upgrade https://github.com/Wizard-Toast/buildadeck/archive/main.tar.gz`
+
+#
+## Examples
+
 ##### Creating a card
 ```py
 >>> from buildadeck import Card
